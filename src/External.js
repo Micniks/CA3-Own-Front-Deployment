@@ -4,8 +4,9 @@ import settingUrl from "./settings";
 export function External() {
   const [norris, setNorris] = useState(<br/>);
   const [dad, setDad] = useState(<br/>);
-  const [country, setCountry] = useState(<br/>);
-  const [time, setTime] = useState(<br/>);
+  const [setup, setSetup] = useState(<br/>);
+  const [punchline, setPunchline] = useState();
+  const [showPunchline, setShowPunchline] = useState(true);
   
   const URL = settingUrl.externalApi();
   
@@ -23,8 +24,9 @@ export function External() {
         console.log(data);
         setDad(data.dadJoke);
         setNorris(data.chuckJoke);
-        setCountry(data.countryName);
-        setTime(data.copenhagenTime);
+        setSetup(data.jokeSetup);
+        setPunchline(data.jokePunchLine);
+        setShowPunchline(false);
       });
   }
   return (<div>
@@ -34,9 +36,8 @@ export function External() {
     <p>{norris}</p>
     <h2>Dad joke:</h2>
     <p>{dad}</p>
-    <h2>Country: </h2>
-    <p>{country}</p>
-    <h2>Copenhagen Timezone:</h2>
-    <p>{time}</p>
+    <h2>Joke: {!showPunchline && <button onClick={()=>{setShowPunchline(true)}}>Punchline please</button>}</h2>
+    <p>{setup}</p>
+    {showPunchline && <p>{punchline}</p>}
   </div>);
 }

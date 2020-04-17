@@ -2,12 +2,12 @@
 function URLS(){
 
     function backendURL() {
-        const URL = "https://andreas-cph.com/CA3-Gruppe3";
+        const URL = "https://jokerthewizard.dk/CA3-Gruppe3";
         return URL;
     }
 
     function externalApi() {
-        const URL = "https://andreas-cph.com/CA3-Gruppe3/api/info/external";
+        const URL = "https://jokerthewizard.dk/CA3-Gruppe3/api/info/external";
         return URL;
     }
 

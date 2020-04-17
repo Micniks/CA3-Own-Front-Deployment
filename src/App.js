@@ -54,8 +54,11 @@ function App() {
 function Home() {
   return (
     <div>
-      <h1>Home</h1>
-      <p>Home is were the wifi connects automatically</p>
+      <h1>Michael Frontend for CA3</h1>
+      <p>
+        This frontend was easy to use from the startcode, but I was annoyed that we could not figure out how to build the frontend as a war file.<br/>
+        Because of this, the guide for the frontend startcode currently only help to deploy on surge, and not to our own droplot.
+      </p>
     </div>
   );
 }
